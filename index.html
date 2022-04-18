@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <title>Teste Frontend VAGAS.com</title>
     <meta charset="UTF-8" />
@@ -7,33 +7,35 @@
   </head>
 
   <body>
-    <div class="box">
-      <div class="header">
+    <main class="box">
+      <header class="header">
         <div class="title">
           Formulário<br />para compra de<br /><span>Pacote de Stickers</span>
         </div>
-      </div>
+      </header>
       <div class="space-md"></div>
       <div class="form">
-        <div class="fieldset">
-          <div class="label">Quais stickers:</div>
-          <div class="space"></div>
-          <label class="checkbox-container"
-            >React
-            <input class="checkbox" type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="checkbox-container"
-            >Vue
-            <input class="checkbox" type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="checkbox-container"
-            >Angular
-            <input class="checkbox" type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-        </div>
+        <form>
+          <div class="fieldset">
+            <div class="label">Quais stickers:</div>
+            <div class="space"></div>
+            <label id="checkbox-react" class="checkbox-container"
+              >React
+              <input class="checkbox" type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label id="checkbox-vue" class="checkbox-container"
+              >Vue
+              <input class="checkbox" type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label id="checkbox-angular" class="checkbox-container"
+              >Angular
+              <input class="checkbox" type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </form>
         <div class="space-md"></div>
         <div class="fieldset">
           <div class="label">Quantos stickers de cada?</div>
@@ -73,10 +75,10 @@
         </div>
         <div class="space-md"></div>
         <div class="footer">
-          <button>Enviar</button>
+          <button onclick="validarForm()">Enviar</button>
         </div>
       </div>
-    </div>
+    </main>
 
     <script src="scripts/script.js"></script>
   </body>

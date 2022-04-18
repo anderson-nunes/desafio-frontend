@@ -31,4 +31,14 @@ function init() {
   });
 }
 
+function validarForm() {
+  const react = document.getElementById("checkbox-react");
+  const vue = document.getElementById("checkbox-vue");
+  const angular = document.getElementById("checkbox-angular");
+
+  const quantidadeStickers = document.getElementById("quantidade-stickers");
+
+  console.log("hello");
+}
+
 init();

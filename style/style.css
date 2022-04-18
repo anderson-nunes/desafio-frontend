@@ -132,6 +132,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   padding: 8px 32px;
+  cursor: pointer;
 }
 
 .footer button:disabled {
@@ -207,4 +208,8 @@ body {
 
 .checkbox-container:has(.checkmark) {
   background-color: red;
+}
+
+.checkbox {
+  background-color: orange;
 }
