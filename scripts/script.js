@@ -16,6 +16,7 @@ function aumentar() {
   quantidade.value = value + 1;
 
   quantidade.dispatchEvent(event);
+  validateQuantidadeStickers();
 }
 
 function init() {
@@ -32,13 +33,25 @@ function init() {
 }
 
 function validarForm() {
-  const react = document.getElementById("checkbox-react");
-  const vue = document.getElementById("checkbox-vue");
-  const angular = document.getElementById("checkbox-angular");
+  const checkReact = document.getElementById("checkbox-react").checked;
+  const checkVue = document.getElementById("checkbox-vue").checked;
+  const checkAngular = document.getElementById("checkbox-angular").checked;
+  const validateButton = document.getElementById("validateButton");
 
+  const checkValidate = checkReact || checkVue || checkAngular;
+
+  validateQuantidadeStickers();
+  console.log(checkValidate);
+}
+
+function validateQuantidadeStickers() {
   const quantidadeStickers = document.getElementById("quantidade-stickers");
-
-  console.log("hello");
+  const validateQuantidadeStickers = parseInt(quantidadeStickers.value) >= 1;
+  if (validateQuantidadeStickers === false) {
+    quantidadeStickers.classList.add("error");
+  } else {
+    quantidadeStickers.classList.remove("error");
+  }
 }
 
 init();

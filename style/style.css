@@ -114,6 +114,10 @@ body {
   height: 42px;
 }
 
+.counter .error {
+  background-color: #f59393;
+}
+
 .footer {
   padding: 32px;
   background: #dde3e9;
@@ -208,8 +212,4 @@ body {
 
 .checkbox-container:has(.checkmark) {
   background-color: red;
-}
-
-.checkbox {
-  background-color: orange;
 }
