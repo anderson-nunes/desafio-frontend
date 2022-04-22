@@ -33,12 +33,19 @@ function init() {
 }
 
 function validarForm() {
-  const checkReact = document.getElementById("checkbox-react").checked;
-  const checkVue = document.getElementById("checkbox-vue").checked;
-  const checkAngular = document.getElementById("checkbox-angular").checked;
-  const validateButton = document.getElementById("validateButton");
+  const checkReact = document.getElementById("checkbox-react");
+  const checkVue = document.getElementById("checkbox-vue");
+  const checkAngular = document.getElementById("checkbox-angular");
+  const fieldsetElement = document.querySelector(".fieldset");
 
-  const checkValidate = checkReact || checkVue || checkAngular;
+  const checkValidate =
+    checkReact.checked || checkVue.checked || checkAngular.checked;
+
+  if (!checkValidate) {
+    fieldsetElement.classList.add("error");
+  } else {
+    fieldsetElement.classList.remove("error");
+  }
 
   validateQuantidadeStickers();
   console.log(checkValidate);

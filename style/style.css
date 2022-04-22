@@ -79,6 +79,10 @@ body {
   padding: 0 32px;
 }
 
+.fieldset.error .checkbox-container > .checkmark {
+  background-color: #f59393;
+}
+
 .counter button svg {
   fill: #2f3676;
 }
